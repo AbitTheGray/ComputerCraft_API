@@ -1,5 +1,5 @@
 ---@class Turbine
-turbine = {}
+local turbine = {}
 
 ---@return number
 function fissionReactor.getSteam() end

@@ -1,5 +1,5 @@
 ---@class FissionReactor
-fissionReactor = {}
+local fissionReactor = {}
 
 ---@return table @Coolant type and amount
 function fissionReactor.getCoolant() end

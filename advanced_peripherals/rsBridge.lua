@@ -1,5 +1,5 @@
 ---@class RSBridge
-rsBridge = {}
+local rsBridge = {}
 
 ---@param item table
 ---@return table

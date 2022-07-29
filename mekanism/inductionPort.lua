@@ -1,5 +1,5 @@
 ---@class InductionPort
-inductionPort = {}
+local inductionPort = {}
 
 ---@return number @0 - 15
 function inductionPort.getComparatorLevel() end

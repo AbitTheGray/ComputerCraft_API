@@ -1,5 +1,5 @@
 ---@class ChatBox
-chatBox = {}
+local chatBox = {}
 
 function chatBox.sendMessage(message, prefix) end
 function chatBox.sendFormattedMessage(jsonObject, prefix) end
