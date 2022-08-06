@@ -1,6 +1,6 @@
 --- https://docs.srendi.de/1.16/peripherals/colony_integrator/
 --- `colonyIntegrator`
----@class colonyIntegrator
+---@class ColonyIntegrator
 local colonyIntegrator = {}
 
 --- Returns true if the block is in a colony.
