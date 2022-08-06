@@ -5,6 +5,7 @@ Based on official documentation (see below) and testing.
 
 Directories:
 - `advanced_peripherals` - [docs.srendi.de](https://docs.srendi.de/) 1.16
+- `colony4cc` - [MineColonies for ComputerCraft](https://www.curseforge.com/minecraft/mc-mods/minecolonies-for-computercraft) ([wiki](https://github.com/uecasm/colony4cc/wiki))
 - `computer_craft` - [tweaked.cc](https://tweaked.cc/) + [computercraft.info (wiki)](https://computercraft.info/wiki/)
   - `peripheral` - official Peripheral APIs
     - `generic` - generic peripheral APIs for interacting with otherwise unsupported blocks

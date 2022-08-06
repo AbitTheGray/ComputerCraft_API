@@ -95,7 +95,8 @@ colonyCitizen.isAsleep = false
 --- "male" or "female"
 ---@type string
 colonyCitizen.gender = {}
----@type number
+--- "child" or "adult"
+---@type string
 colonyCitizen.age = 0
 ---@type number
 colonyCitizen.id = 0
@@ -192,7 +193,7 @@ colonyVisitor.id = 0
 --- "male" or "female"
 ---@type string
 colonyVisitor.gender = ""
---- "adult"
+--- "adult" or "child"
 ---@type string
 colonyVisitor.age = ""
 ---@type number
@@ -200,7 +201,7 @@ colonyVisitor.happiness = 0
 ---@type number
 colonyVisitor.saturation = 0
 ---@type Vector
-colonyVisitor.location = ""
+colonyVisitor.location = {}
 ---@type ColonySkillTable
 colonyVisitor.skills = {}
 --- only item opener, not amount
@@ -255,7 +256,7 @@ local colonyBuildingStructure = {}
 ---@type boolean
 colonyBuildingStructure.mirror = false
 ---@type number
-colonyBuildingStructure.mirror = 0
+colonyBuildingStructure.rotation = 0
 
 
 
@@ -317,7 +318,7 @@ colonyResearchItem.name = ""
 ---@type string[]
 colonyResearchItem.name = {}
 --- Top parent does not have this field.
---- "NOT_STARTED"
+--- "NOT_STARTED", "IN_PROGRESS" or "FINISHED"
 ---@type string
 colonyResearchItem.status = ""
 ---@type ColonyResearchItem[]
@@ -342,9 +343,13 @@ colonyResource.displayName = ""
 colonyResource.item = ""
 ---@type number
 colonyResource.needed = 0
---- "DONT_HAVE", "NOT_NEEDED"
+--- "DONT_HAVE"   = the builder doesn't have any of this item.
+--- "HAVE_ENOUGH" = the builder has enough items to get started (usually just 1) but will run out before finishing.
+--- "NEED_MORE"   = the builder doesn't have enough to continue.
+--- "IN_DELIVERY" = the builder is waiting for a delivery of items.
+--- "NOT_NEEDED"  = the builder has enough items to complete the build.
 ---@type string
-colonyResource.status = 0
+colonyResource.status = ""
 
 
 
