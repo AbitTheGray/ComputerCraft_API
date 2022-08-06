@@ -427,10 +427,9 @@ colonyWorkOrder.workOrderType = 0
 ---@class ColonyCCResource
 local colonyResource = {}
 
---- Item opener
---- "minecraft:armor_stand"
----@type string
-colonyResource.item = ""
+--- Item
+---@type ColonyCCItem
+colonyResource.item = {}
 ---@type number
 colonyResource.available = 0
 ---@type number
@@ -451,7 +450,7 @@ local colonyItem = {}
 --- Item opener
 --- "minecraft:armor_stand"
 ---@type string
-colonyItem.item = ""
+colonyItem.name = ""
 ---@type string
 colonyItem.displayName = ""
 ---@type number
