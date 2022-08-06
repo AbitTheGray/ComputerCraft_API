@@ -83,5 +83,5 @@ function textutils.urlEncode(urlUnsafeString) end
 --- Requires version 1.74 or later.
 ---@param partialName string @The partial expression to complete, such as a variable name or table index.
 ---@param environment table @(OPTIONAL) The table to find variables in, defaulting to the global environment (_G). The function also searches the "parent" environment via the __index metatable field.
----@return table @The (possibly empty) list of completions
+---@return string[] @The (possibly empty) list of completions
 function textutils.complete(partialName, environment) end

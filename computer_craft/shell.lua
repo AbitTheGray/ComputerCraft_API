@@ -49,17 +49,17 @@ function shell.resolve(path) end
 function shell.resolveProgram(command) end
 --- Return a list of all programs on the path.
 ---@param include_hidden boolean @(OPTIONAL) Include hidden files. Namely, any which start with `.`.
----@return table @A list of available programs.
+---@return string[] @A list of available programs.
 function shell.programs(include_hidden) end
 --- Complete a shell command line.
 --- This accepts an incomplete command, and completes the program name or arguments. For instance, l will be completed to ls, and ls ro will be completed to ls rom/.
 --- Completion handlers for your program may be registered with shell.setCompletionFunction.
 ---@param sLine string @The input to complete.
----@return table|nil @The list of possible completions.
+---@return string[]|nil @The list of possible completions.
 function shell.complete(sLine) end
 --- Complete the name of a program.
 ---@param program string @The name of a program to complete.
----@return table @A list of possible completions.
+---@return string[] @A list of possible completions.
 function shell.completeProgram(program) end
 --- Set the completion function for a program. When the program is entered on the command line, this program will be called to provide auto-complete information.
 --- The completion function accepts four arguments:

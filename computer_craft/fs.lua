@@ -15,12 +15,12 @@ function fs.isDriveRoot(path) end
 ---@param location string @The location where paths are resolved from.
 ---@param includeFiles string @(OPTIONAL) When false, only directories will be included in the returned list.
 ---@param includeSlashes string @(OPTIONAL) When false, "raw" directories will not be included in the returned list.
----@return table @A list of possible completion candidates.
+---@return string[] @A list of possible completion candidates.
 function fs.complete(path, location, includeFiles, includeSlashes) end
 --- Returns a list of all the files (including subdirectories but not their contents) contained in a directory, as a numerically indexed table.
 ---@param path string
 ---@throw If the path doesn't exist.
----@return table @A table with a list of files in the directory.
+---@return string[] @A table with a list of files in the directory.
 function fs.list(path) end
 --- Combines several parts of a path into one full path, adding separators as needed.
 ---@param basePath string
@@ -93,7 +93,7 @@ function fs.getFreeSpace(path) end
 --- Searches for files matching a string with wildcards.
 --- This string is formatted like a normal path string, but can include any number of wildcards (*) to look for files matching anything. For example, rom/*/command* will look for any path starting with command inside any subdirectory of /rom.
 ---@param wildcard string @The wildcard-qualified path to search for.
----@return table @A list of paths that match the search string.
+---@return string[] @A list of paths that match the search string.
 function fs.find(wildcard) end
 --- Returns the capacity of the drive the path is located on.
 ---@param path string
@@ -107,3 +107,23 @@ function fs.getCapacity(path) end
 ---@throw If the path does not exist.
 ---@return table
 function fs.attributes(path) end
+
+
+
+---@class FsAttribute
+local fsAttribute = {}
+
+---@type number
+fsAttribute.size = 0
+---@type boolean
+fsAttribute.isDir = false
+---@type boolean
+fsAttribute.isReadOnly = false
+--- Number of milliseconds since the UNIX epoch.
+--- This may be given to os.date in order to convert it to more usable form.
+---@type number
+fsAttribute.created = 0
+--- Number of milliseconds since the UNIX epoch.
+--- This may be given to os.date in order to convert it to more usable form.
+---@type number
+fsAttribute.modified = 0
