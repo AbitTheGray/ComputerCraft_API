@@ -12,3 +12,5 @@ Directories:
 - `utils` - custom utils, not an API
 
 Events are listed in each directory inside `events.md` file.
+
+All `.lua` files have documentation based on [EmmyLua](https://github.com/EmmyLua) ([docs](https://emmylua.github.io/)) but extended by `@throw` to know when there is a chance of exception.
