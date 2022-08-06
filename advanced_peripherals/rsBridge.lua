@@ -1,4 +1,5 @@
 --- https://docs.srendi.de/1.16/peripherals/rs_bridge/
+--- `rsBridge`
 ---@class RSBridge
 local rsBridge = {}
 

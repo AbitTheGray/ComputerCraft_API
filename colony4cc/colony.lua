@@ -4,6 +4,7 @@
 --- Almost all API methods will return either a single value on success, or two values on failure — the first is nil and the second is a string with a human-readable error message.
 --- You can ignore the second return value if you wish, but it may be useful to log it to help track down problems.
 --- https://github.com/uecasm/colony4cc/wiki
+--- `colony`
 ---@class ColonyCC
 local colony = {}
 

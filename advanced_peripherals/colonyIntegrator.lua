@@ -1,4 +1,5 @@
 --- https://docs.srendi.de/1.16/peripherals/colony_integrator/
+--- `colonyIntegrator`
 ---@class colonyIntegrator
 local colonyIntegrator = {}
 

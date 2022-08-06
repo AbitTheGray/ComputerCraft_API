@@ -1,4 +1,5 @@
 --- https://docs.srendi.de/1.16/peripherals/chat_box/
+--- `chatBox`
 ---@class ChatBox
 local chatBox = {}
 
