@@ -373,7 +373,7 @@ colonyRequest.target = ""
 ---@type string
 colonyRequest.id = ""
 ---@type ColonyItemStack[]
-colonyRequest.item = {}
+colonyRequest.items = {}
 ---@type number
 colonyRequest.minCount = 0
 --- Same as `name`
