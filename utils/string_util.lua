@@ -31,6 +31,32 @@ function stringUtil.padBoth(str, length)
   return padRight(padLeft(str, length - math.floor((length - #str) / 2)), length)
 end
 
+function stringUtil.trimLeft(str)
+  if string.sub(str, i, i) ~= " " then
+    return str
+  end
+  for i = 2, #str do
+    if string.sub(str, i, i) ~= " " then
+      return string.sub(str, i)
+    end
+  end
+end
+function stringUtil.trimRight(str)
+  local strLen = #str
+  if string.sub(str, strLen - 1, strLen - 1) ~= " " then
+    return str
+  end
+  for i = 2, strLen - 1 do --TODO Verify this works correctly
+    if string.sub(str, strLen - 1 - i, strLen - 1 - i) ~= " " then
+      return string.sub(str, strLen - 1 - i)
+    end
+  end
+end
+
+function stringUtil.trim(str)
+  return stringUtil.trimRight(stringUtil.trimLeft(str))
+end
+
 --- Converts numeric value into up to 3 numeric characters with abbreviation character at the end.
 --- Prefixed with `-` for negative numbers.
 --- Works only for whole numbers or single digit after decimal point.
@@ -76,3 +102,5 @@ function stringUtil.formatHuman(amount)
 
   return negativePrefix.."???"
 end
+
+return stringUtil
